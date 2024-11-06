@@ -1,0 +1,162 @@
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0 50px; 
+  box-sizing: border-box; 
+  margin-top: 50px;
+}
+
+.helpImage {
+  flex-shrink: 0;
+  height: 445px; /* Default height */
+  width: 398px; /* Default width */
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 250px;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobileColor {
+  color: #128c78;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .helpImage {
+    height: 400px;
+    width: 360px;
+  }
+}
+
+@media (max-width: 992px) {
+  .flexContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3%;
+  }
+  .helpImage {
+    height: 350px;
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .helpImage {
+    height: 300px;
+    width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .helpImage {
+    height: 250px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .helpImage {
+    height: 200px;
+    width: 180px;
+  }
+}
+
+/* Headline Text Styles */
+.headlineText {
+  font-size: 36px; /* Default font size */
+  line-height: 46px; /* Default line height */
+}
+
+/* Responsive Headline Styles */
+@media (min-width: 480px) {
+  .headlineText {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media (min-width: 576px) {
+  .headlineText {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+@media (min-width: 768px) {
+  .headlineText {
+    font-size: 44px;
+    line-height: 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  .headlineText {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .headlineText {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+
+/* Add styles for other text classes here, if necessary */
+.headingsty {
+  font-size: 32px; /* Default font size for heading */
+  line-height: 42px; /* Default line height */
+}
+
+@media (max-width: 768px) {
+  .headingsty {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headingsty {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headingsty {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.infosty,
+.infodetailstxtsty {
+  font-size: 18px; /* Default font size */
+  line-height: 24px; /* Default line height */
+}
+
+@media (max-width: 480px) {
+  .infosty,
+  .infodetailstxtsty {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

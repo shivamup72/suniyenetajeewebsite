@@ -1,0 +1,114 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #000000; */
+  max-width: 1180px;
+  height: 60px;
+  width: 96%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.burgerIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  margin-top: 5px;
+  z-index: 3;
+}
+
+/* Navbar items styling */
+.navItems {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.navLinks p {
+  text-decoration: none;
+  color: #ffff;
+  margin-left: 10px;
+}
+
+/* Overlay styling for mobile when the menu is open */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navItems {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffff;
+    padding-top: 60px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 2;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .navItems.open {
+    transform: translateX(0);
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Add vertical padding of 10px for each menu item */
+  .navLinks li {
+    margin: -10px 0;
+    padding: 10px 20px; /* Adds 10px vertical padding and 20px left padding */
+  }
+
+  .burgerIcon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}

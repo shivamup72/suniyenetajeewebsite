@@ -1,0 +1,35 @@
+const ImageAssets = {
+  netaji_pic: require("./netajiPNG.webp"),
+  suniye_netaji: require("./suniye_netaji.webp"),
+  pm_Pic: require("./pm.png"),
+  logo: require("./logo3.webp"),
+  mera_vate: require("./meravate4.webp"),
+  nesw2: require("./news2.webp"),
+  news3: require("./news3.webp"),
+  news4: require("./news4.webp"),
+  news5: require("./news8.webp"),
+  news6: require("./news6.webp"),
+  news8: require("./news8.webp"),
+  woman_news: require("./woman_insaf.webp"),
+  youth_vote: require("./First-voters_image.webp"),
+  woman_vote: require("./woman_Voteimage.webp"),
+  rajsthan_vate: require("./voter_machine.webp"),
+  suniyenetajiapp_girlPromossion: require("./suniyenetajeepost201.webp"),
+  businessBanner: require("./Business.webp"),
+  cia_pic: require("./India.webp"),
+  Panjab_news: require("./MOTN-Socio-Political-Aug23_1.webp"),
+  contact_banner: require("./png-clipart-goods-and-services-tax-indirect-tax-accounting-others-service-income-tax (2).webp"),
+  logo2: require("./logo2.webp"),
+  logo3: require("./logo3.webp"),
+
+  logo13: require("./logo13.png"),
+  bannerpoli1: require("./bannerpoli1.webp"),
+  bannerpoli2: require("./bannerpoli2.webp"),
+  bannerpoli3: require("./bannerpoli3.webp"),
+
+  digital1: require("./digital1.webp"),
+  digital2: require("./digital1 (2).webp"),
+  privacy: require("./privacy.webp"),
+};
+
+export default ImageAssets;

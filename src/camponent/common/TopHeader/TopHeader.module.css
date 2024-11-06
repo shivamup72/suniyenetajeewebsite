@@ -1,0 +1,123 @@
+.container {
+  padding: 10px;
+  max-width: 1170px;
+  width: 96%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.logoimgsty {
+  height: 149px;
+  margin-right: 10px;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerText {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.blackBox {
+  background-color: #000;
+  color: white;
+  height: 40px;
+  width: 201px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellowBox {
+  background-color: #ffea00;
+  height: 40px;
+  width: 143px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.citysty {
+  width: 36px;
+  height: 36px;
+  left: 10px;
+}
+
+.locationcon {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.searchcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+}
+
+/* Adjustments for medium screens */
+@media (max-width: 992px) {
+  .logoimgsty {
+    height: 120px;
+  }
+  .blackBox,
+  .yellowBox {
+    width: 140px;
+  }
+}
+
+/* Adjustments for tablets */
+@media (max-width: 768px) {
+  .logoimgsty {
+    height: 100px;
+  }
+  .blackBox,
+  .yellowBox {
+    width: 120px;
+  }
+  .headerText {
+    font-size: 12px;
+  }
+}
+
+/* Adjustments for small mobile screens */
+@media (max-width: 576px) {
+  .logoimgsty {
+    height: 70px;
+  }
+  .blackBox {
+    width: 100px;
+    height: 35px;
+  }
+  .yellowBox {
+    width: 70px;
+    height: 35px;
+  }
+  .headerText {
+    font-size: 12px;
+  }
+  .citysty {
+    width: 26px;
+    height: 26px;
+    left: 10px;
+  }
+  .headerText {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+  }
+}

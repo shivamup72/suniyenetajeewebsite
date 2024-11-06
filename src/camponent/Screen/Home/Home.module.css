@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Only top margin */
+  margin-left: auto; /* Optional: Center horizontally if needed */
+  margin-right: auto; /* Optional: Center horizontally if needed */
+  width: 96%;
+  background-color: #fff;
+  max-width: 1169px;
+}
+
+
+.homecontainer {
+  align-items: center;
+  width: 100%;
+}
+
+.imgcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.modijiimgsty {
+  height: 562px;
+  /* width: 100%; */
+  max-width: 689px;
+  position: relative;
+}
+
+.sinhajiimgsty {
+  width: 100%;
+  height: 278px;
+  max-width: 485px;
+}
+
+.aamjiimgsty {
+  width: 100%;
+  max-width: 486px;
+  height: 280px;
+}
+
+.textsty {
+  font-size: 28px;
+  color: white;
+  line-height: 41.75px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 55%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.textstytwo {
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  line-height: 31.31px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.salmanimgstycontainer {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  background-color: #ffea00;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.salmaniimgsty {
+  width: 572px;
+  height: 449px;
+}
+
+.salmantxtsty {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  color: black;
+  padding-left: 15px;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+.highlight {
+  color: #033d49; /* Choose your desired color */
+}
+
+
+
+@media (max-width: 768px) {
+  .modijiimgsty,
+  .sinhajiimgsty,
+  .aamjiimgsty {
+    width: 100%;
+    height: auto;
+  }
+
+  .textsty {
+    font-size: 24px;
+    width: 90%;
+  }
+
+  .textstytwo {
+    font-size: 20px;
+    line-height: 28px;
+    width: 90%;
+    left: 10px;
+  }
+}

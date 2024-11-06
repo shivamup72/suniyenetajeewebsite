@@ -1,0 +1,95 @@
+.container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.imagecontainer {
+    width: 625px;
+    height: 465px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.categorySection {
+    flex: 1;
+    padding-left: 10px;
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+.newtxtsty {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    color: black;
+}
+
+.newsImage {
+    width: 155px;
+    height: 87px;
+    object-fit: cover;
+}
+
+.newsItem {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+.imgsty {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.marketingimgsty {
+    height: 253px;
+    width: 297px;
+}
+
+.redOverlay {
+    background-color: rgba(0, 0, 0, 1);
+    height: 85px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.headtxtsty {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagecontainer {
+        width: 100%; /* Make the image container full width */
+        height: auto; /* Adjust height automatically */
+    }
+    .marketingimgsty {
+        width: 100%; /* Make marketing image full width */
+        height: auto; /* Adjust height automatically */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+}

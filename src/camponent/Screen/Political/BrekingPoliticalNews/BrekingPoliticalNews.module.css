@@ -1,0 +1,122 @@
+/* General Styles */
+.breakingnews {
+    height: 64px;
+    background-color: #ffdd1a;
+    border-radius: 40.5px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* padding: 0 3px; */
+    overflow: hidden;
+}
+
+.headingcontainer {
+    height: 74px;
+    width: 189px;
+    background-color: #023e4a;
+    border-radius: 40.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hedingtxtsty {
+    font-size: 28px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.ticker {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.linesty {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: scrollText 15s linear infinite;
+}
+
+/* Scrolling Text Animation */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large screens (desktops and large laptops) */
+@media (min-width: 1200px) {
+    .breakingnews {
+        height: 70px;
+        /* padding: 0 20px; */
+    }
+
+    .headingcontainer {
+        height: 70px;
+        width: 200px;
+    }
+
+    .hedingtxtsty {
+        font-size: 30px;
+    }
+
+    .linesty {
+        font-size: 22px;
+    }
+}
+
+/* Medium screens (tablets and small laptops) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .breakingnews {
+        height: 70px;
+        padding: 0 16px;
+    }
+
+    .headingcontainer {
+        height: 70px;
+        width: 180px;
+    }
+
+    .hedingtxtsty {
+        font-size: 26px;
+    }
+
+    .linesty {
+        font-size: 18px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 767px) {
+    .breakingnews {
+        height: 50px;
+        padding: 10px;
+        /* gap: 10px; */
+    }
+
+    .headingcontainer {
+        width: 160px;
+        height: 50px;
+    }
+
+    .hedingtxtsty {
+        font-size: 16px;
+    }
+
+    .linesty {
+        font-size: 16px;
+    }
+}

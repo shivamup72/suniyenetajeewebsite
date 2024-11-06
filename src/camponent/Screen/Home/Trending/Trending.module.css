@@ -1,0 +1,150 @@
+.lineImage {
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+  }
+  
+  .trendingNewsContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .imageContainertwo {
+    position: relative;
+  }
+  
+  .puspaimgstyle {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlayText {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: 700;
+    padding-left: 40px;
+    font-size: 48px;
+  }
+  
+  .trendingnewimgsty {
+    width: 307px;
+    height: 160px;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+  }
+  
+  .anumpaimgsty {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  .newscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .newstxtsty {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24.64px;
+    color: #393939;
+  }
+  
+  .newconsty {
+    width: 22%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Responsive styles for different screen sizes */
+  
+  /* Smaller devices - adjust text size and layout */
+  @media (max-width: 1200px) {
+    .overlayText {
+      font-size: 40px;
+    }
+    .newconsty {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .overlayText {
+      font-size: 36px;
+    }
+    .newconsty {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .overlayText {
+      font-size: 30px;
+    }
+    .newconsty {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile view - center the image horizontally */
+  @media (max-width: 576px) {
+    .overlayText {
+      font-size: 24px;
+      padding-left: 20px;
+    }
+  
+    .trendingnewimgsty {
+      margin: 0 auto; /* Center the image container horizontally */
+      width: 100%; /* Make the image take full width */
+      max-width: 307px; /* Ensure it doesn't exceed the original size */
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlayText {
+      font-size: 18px;
+      padding-left: 15px;
+    }
+  }
+  
+  /* Larger devices - adjust styles for wide screens */
+  @media (min-width: 1200px) {
+    .overlayText {
+      font-size: 48px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .overlayText {
+      font-size: 42px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .overlayText {
+      font-size: 36px;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .overlayText {
+      font-size: 30px;
+    }
+  }
+  
+  @media (min-width: 480px) {
+    .overlayText {
+      font-size: 24px;
+    }
+  }
+  
