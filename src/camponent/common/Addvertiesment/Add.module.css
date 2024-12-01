@@ -1,0 +1,92 @@
+.container {
+    height: 379px;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .lineImage {
+    width: 1280px; /* Width of the line */
+    height: 1px; /* Height of the line */
+    position: absolute; /* Allows placement over the frame */
+    left: 0; /* Aligns the line to the left of the frame */
+    bottom: 0px;
+    z-index: 1; /* Ensures line stays above the frame image */
+  }
+  
+  .framestyle {
+    width: 97px; /* Width of the frame */
+    height: 20px; /* Height of the frame */
+    position: relative; /* Sets frame as reference for absolute positioning */
+  }
+  
+  .bannerimgsty {
+    width: 1275px;
+    height: 379px;
+    margin-top: 20px;
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      height: 379px;
+    }
+    .bannerimgsty {
+      width: 1275px;
+      height: 379px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .container {
+      height: 350px;
+    }
+    .bannerimgsty {
+      width: 750px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .container {
+      height: 320px;
+    }
+    .bannerimgsty {
+      width: 600px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      height: 290px;
+    }
+    .bannerimgsty {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .container {
+      height: 260px;
+    }
+    .bannerimgsty {
+      width:98%;
+      margin-top: 20px;
+      height: 200px;
+    }
+    .lineImage {
+      width: 100%; /* Width of the line */
+      height: 1px; /* Height of the line */
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .bannerimgsty {
+      width: 98%;
+      margin-top: 20px;
+      padding-left: 5px;
+      /* margin: 0 auto; */
+      display: block;
+    }
+  }
+  

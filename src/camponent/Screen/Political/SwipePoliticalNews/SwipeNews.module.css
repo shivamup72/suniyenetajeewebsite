@@ -1,0 +1,130 @@
+.container {
+    margin: 20px auto;
+    max-width: 1280px; /* Ensures the container doesn't grow too wide */
+  }
+  
+  .line1 {
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+  }
+  .line4 {
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+    margin-top: 5px;
+  }
+  .newsLink {
+    color: #fff;
+  }
+  .newsLink div:hover .headnewssty {
+    color: red;
+  }
+  
+  .line2 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 5px;
+  }
+  .line3 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+  }
+  
+  .homecontainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgstyle {
+    width: 412px;
+    height: 210px;
+  }
+  
+  .horizontalScroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  .headnewssty {
+    font-size: 24px;
+    line-height: 33px;
+    color: black;
+    font-weight: 700;
+    max-width: 410px;
+    /* text-align: center; */
+  }
+  
+  /* Media Queries */
+  
+  /* Large Desktop Screens */
+  @media (min-width: 1200px) {
+    .headnewssty {
+      font-size: 28px;
+      line-height: 36px;
+      text-align: left; /* Aligns text to the left for larger screens */
+    }
+  }
+  
+  /* Laptops and Medium Desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    .imgstyle {
+      max-width: 350px;
+    }
+  
+    .headnewssty {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .homecontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imgstyle {
+      width: 98%;
+      height: auto;
+    }
+  
+    .headnewssty {
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 576px) {
+    .container {
+      width: 100%;
+    }
+  
+    .horizontalScroll {
+      gap: 15px; /* Reduce gap for smaller screens */
+    }
+  
+    .imgstyle {
+      width: 310px;
+      height: 210px;
+    }
+  
+    .headnewssty {
+      font-size: 18px;
+    }
+  }
+  

@@ -1,17 +1,12 @@
 .container {
   padding: 10px;
-  max-width: 1170px;
+  max-width: 1280px;
   width: 96%;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Centers the container horizontally */
-}
-
-.logoimgsty {
-  height: 149px;
-  margin-right: 10px;
+  margin: 0 auto;
 }
 
 .flexRow {
@@ -19,6 +14,37 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.hiddenimg {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Logo styling */
+.logoimgsty {
+  /* display: block; */
+  height: 149px;
+  width: 149px;
+  margin-right: 10px;
+}
+
+/* "Suniye" and "Neta" images styling */
+.netajitxtsty {
+  height: 53px;
+  width: 120px;
+  margin-right: 5px;
+}
+
+.netasty {
+  height: 57px;
+  width: 172px;
+}
+
+/* Mobile-specific text styling */
+.mobileText {
+  display: none;
 }
 
 .headerText {
@@ -70,6 +96,12 @@
 }
 
 /* Adjustments for medium screens */
+@media (max-width: 1200px) {
+  .hiddenimg {
+    display: flex;
+  }
+}
+
 @media (max-width: 992px) {
   .logoimgsty {
     height: 120px;
@@ -82,13 +114,26 @@
 
 /* Adjustments for tablets */
 @media (max-width: 768px) {
-  .logoimgsty {
-    height: 100px;
+  /* Hide logo image on mobile */
+
+
+  /* Display "Suniye" and "Neta" images centered on mobile */
+  .hiddenimg {
+    justify-content: center;
   }
+
+  /* Display mobile-specific text */
+  .mobileText {
+    display: block;
+    font-size: 20px;
+    color: white;
+  }
+
   .blackBox,
   .yellowBox {
     width: 120px;
   }
+
   .headerText {
     font-size: 12px;
   }
@@ -96,28 +141,39 @@
 
 /* Adjustments for small mobile screens */
 @media (max-width: 576px) {
+  .searchcontainer {
+    margin-left: 32px;
+  }
   .logoimgsty {
-    height: 70px;
+   height: 60px;
+   width: 60px;
   }
   .blackBox {
-    width: 100px;
+    width: 90px;
     height: 35px;
   }
+  .netajitxtsty {
+  display: none;
+  }
+
+  .netasty {
+    display: none;
+  }
+
   .yellowBox {
-    width: 70px;
+    width: 80px;
     height: 35px;
   }
-  .headerText {
-    font-size: 12px;
-  }
-  .citysty {
-    width: 26px;
-    height: 26px;
-    left: 10px;
-  }
+
   .headerText {
     font-size: 12px;
     color: white;
     text-align: center;
+  }
+
+  .citysty {
+    width: 26px;
+    height: 26px;
+    left: 10px;
   }
 }

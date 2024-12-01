@@ -1,0 +1,143 @@
+.container {
+  margin-top: 10px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsrows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Styling for items */
+.itemcontainer {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  /* margin: 0 auto; */
+}
+.newsLink {
+  color: #fff;
+}
+
+.newsLink:hover .newstxtsty {
+  color: red; /* Change text color to red on hover */
+}
+
+.newstxtsty {
+  transition: color 0.3s ease; /* Smooth color change */
+  color: black; /* Default text color */
+}
+
+.itemsepretor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headingtxtsty {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  line-height: 28.13px;
+}
+
+.seemoretxtsty {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  padding-top: 20px;
+  line-height: 14.06px;
+}
+
+.newscontainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.imgsty {
+  width: 196px;
+  height: 120px;
+}
+
+.newstxtsty {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #25213b;
+  width: 96%;
+}
+
+/* Media Queries */
+
+/* Extra Large Devices (desktops) */
+@media (min-width: 1200px) {
+  .newsrows {
+    gap: 20px;
+  }
+}
+
+/* Large Devices (medium desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .newsrows {
+    gap: 15px;
+  }
+  .itemcontainer {
+    max-width: 380px;
+  }
+}
+
+/* Medium Devices (tablets) */
+@media (max-width: 768px) {
+  .newsrows {
+    flex-direction: column;
+    align-items: center;
+  }
+  .itemcontainer {
+    width: 100%;
+  }
+}
+
+/* Small Devices (large mobiles) */
+@media (max-width: 576px) {
+  .newscontainer {
+    flex-direction: column; /* Stack image above text */
+    align-items: center;
+  }
+  .imgsty {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+  .newstxtsty {
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices (small mobiles) */
+@media (max-width: 480px) {
+  .newscontainer {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(37, 33, 59, 0.2);
+  }
+
+  .newstxtsty {
+    color: #000;
+  }
+  .imgsty {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .newstxtsty {
+    width: 100%;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

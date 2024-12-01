@@ -1,0 +1,55 @@
+.addcontainersty {
+  display: flex;
+  flex-direction: column; /* Column layout by default */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.imgsty2 {
+  width: 297px;
+  height: 450px;
+  margin-top: 10px;
+}
+.imgsty1 {
+  width: 297px;
+  height: 92px;
+}
+.heading {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #313131;
+}
+
+.imgsty3 {
+  width: 297px;
+  height: 200px;
+  margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .addcontainersty {
+    flex-direction: column;
+  }
+  .imgsty1 {
+    width: 99%;
+    height: 92px;
+  }
+  .imgsty2 {
+    width: 99%;
+    height: 450px;
+    margin-top: 10px;
+  }
+
+  .imgsty3 {
+    width: 99%;
+    height: 220px;
+    margin-top: 10px;
+  }
+  .heading {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #313131;
+}
+}

@@ -1,0 +1,41 @@
+/* Base styles for the container */
+.container {
+  margin: 20px auto; /* Center content horizontally by default */
+  padding: 10px; /* Add padding for consistent spacing */
+  max-width: 1280px; /* Limit the width on larger screens */
+}
+
+/* Base styles for the image */
+.imgstyle {
+  width: 100%; /* Make the image width responsive */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 429px; /* Optional: Prevent images from getting too tall */
+}
+
+/* Media Queries for responsiveness */
+
+/* For smaller tablets and large phones (e.g., <768px) */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px 5px;
+    padding: 5px;
+  }
+
+  .imgstyle {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* For smaller mobile devices (e.g., <480px) */
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .imgstyle {
+    max-width: 100%; /* Ensure the image scales within the viewport */
+    height: auto;
+  }
+}

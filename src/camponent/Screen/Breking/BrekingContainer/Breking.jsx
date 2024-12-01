@@ -4,21 +4,36 @@ import BrekingNews from "../BrekingNews/BrekingNews";
 import CategoryNews from "../Categories/CategoryNews";
 import RecentNews from "../RecentNews/RecentNews";
 import PopularBrekingNews from "../PopularBrekingNews/PopularBrekingNews";
-import Footer from '../../../common/Footer/Footer'
-import Contucts from "../../Home/Contactsus/Contucts";
+import Footer from '../../../common/Footer/Footer';
+import Add from "../../../common/Addvertiesment";
+import addimg from "../../../assest/WorldAdd.png";
+import VoteAddverties from "../../../common/VoteAddverties";
 
 
 function Breking() {
     return (
         <div>
-            <div className={styles.container}>
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: '20px',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    width: '96%',
+                    backgroundColor: '#fff',
+                    maxWidth: '1280px'
+                }}
+            >
                 <div className={styles.homecontainer}>
                     <div>
+                        <Add bannerImage={addimg}/>
                         <BrekingNews />
                         <CategoryNews />
                         <RecentNews />
                         <PopularBrekingNews />
-                        <Contucts/>
+                        <VoteAddverties />
                     </div>
                 </div>
             </div>

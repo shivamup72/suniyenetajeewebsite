@@ -1,20 +1,30 @@
 import React from "react";
 import styles from "../../Home/Home.module.css";
 import Footer from "../../../common/Footer/Footer";
-import About from "../../Home/AboutHome/About";
-import Contucts from "../../Home/Contactsus/Contucts";
+// import About from "../../Home/AboutHome/About";
+// import Contucts from "../../Home/Contactsus/Contucts";
 import TrendingSportsNews from "../TrendSportsNews/TrendingSportsNews";
 
 
 function Sports() {
     return (
         <div>
-            <div className={styles.container}>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '20px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: '96%',
+                backgroundColor: '#fff',
+                maxWidth: '1280px'
+            }}>
                 <div className={styles.homecontainer}>
                     <div>
                         <TrendingSportsNews />
-                        <About />
-                        <Contucts />
+                        {/* <About /> */}
+                        {/* <Contucts /> */}
                     </div>
                 </div>
             </div>

@@ -1,34 +1,38 @@
 import React from "react";
 import styles from "./Home.module.css";
-import modiji from "../../assest/rahul.png";
-import sinha from "../../assest/sinhaji.png";
-import appparty from "../../assest/aamparty.png";
-import salman from "../../assest/salman.png";
-import TrendingNews from "./Trending/TrendingNews";
-import News from "./New/News";
-import Vote from "./Vote/Vote";
-import About from "./AboutHome/About";
+import PopularPoliticalNews from "./PopularPoliticalNews";
+import RecentPoliticalNews from "./RecentPoliticalNews";
+import PoliticalNews from "./PoliticalNews/PoliticalNews";
+import SportAndBusiness from "./MoreNews/SportAndBusines";
+import TrendingNews from "./TrendingNews";
+import BrekingPoliticalNews from "./BrekingPoliticalNews/BrekingPoliticalNews";
+import addbanner from '../../assest/addbanner.png'
+import Add from "../../common/Addvertiesment";
+import VoteAddverties from "../../common/VoteAddverties";
 import Footer from "../../common/Footer/Footer";
-import HomeScreen from "./HomeScreen/HomeScreen";
-import Contucts from "./Contactsus/Contucts";
+
+
+
 
 function Home() {
   return (
     <div>
-      <div className={styles.container}>
+      <div className={styles.maincontainer}>
         <div className={styles.homecontainer}>
-          <div>
-            <HomeScreen />
+          <Add bannerImage={addbanner} />
+          <BrekingPoliticalNews />
+          <PoliticalNews />
+          <PopularPoliticalNews />
+          <RecentPoliticalNews />
+          <div className={styles.trendingpolicessty}>
+            <SportAndBusiness />
             <TrendingNews />
-            <News />
-            <Vote />
-            <About />
-            <Contucts />
           </div>
+          <VoteAddverties />
         </div>
       </div>
       <Footer />
-    </div>
+    </div >
   );
 }
 

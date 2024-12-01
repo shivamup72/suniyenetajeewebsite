@@ -6,6 +6,7 @@ import rightImage from '../../../assest/rightimage.png';
 import image4 from "../../../assest/image4.png";
 import image5 from "../../../assest/image5.png";
 import image6 from "../../../assest/image6.png";
+import { Link } from 'react-router-dom';
 
 const newsItems = [
     {
@@ -55,7 +56,7 @@ function RecentNews() {
     return (
         <div className={styles.container}>
             <h5>Recent News</h5>
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div className={styles.contentcontainer}>
                 <div className={styles.imagecontainer}>
                     <img src={newsItems[currentIndex].image} alt='background' className={styles.imgsty} />
                     <div className={styles.redOverlay}>
@@ -76,10 +77,17 @@ function RecentNews() {
                 </div>
                 <div className={styles.categorySection}>
                     {newsItems2.map((item, index) => (
-                        <div key={index} className={styles.newsItem}>
-                            <img src={item.imgSrc} alt="News item" className={styles.newsImage} />
-                            <p className={styles.newtxtsty}>{item.text}</p>
-                        </div>
+                        <Link
+                            to={`/news/${index}`}
+                            state={{ item }}
+                            key={index}
+                            className={styles.newsLink}
+                        >
+                            <div key={index} className={styles.newsItem}>
+                                <img src={item.imgSrc} alt="News item" className={styles.newsImage} />
+                                <p className={styles.newtxtsty}>{item.text}</p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </div>

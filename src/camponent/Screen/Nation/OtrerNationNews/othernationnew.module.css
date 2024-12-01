@@ -1,0 +1,267 @@
+.container {
+  width: 920px;
+  margin-top: 30px;
+}
+
+.headingtxtsty {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 59px;
+  color: black;
+}
+
+.policeimgsty {
+  width: 918px;
+  height: 625px;
+}
+.homecontainer {
+  display: flex;
+  flex-direction: row;
+}
+.nationnews:hover .newstxtsty,
+.nationnews:hover .btntxtsty {
+  color: red;
+}
+.newsLink {
+  color: #fff;
+}
+
+.newscontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 16px;
+  width: 100%;
+  max-width: 918px;
+}
+
+.nationnews {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 918px;
+  padding-bottom: 30px;
+}
+
+.imgsty {
+  width: 100%;
+  max-width: 326px;
+  height: auto;
+}
+
+.newstxtsty {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  line-height: 28px;
+  padding-left: 15px;
+}
+
+.btntxtsty {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #c80000;
+  padding-left: 15px;
+}
+
+/* 1. @media(max-width: 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    width: 85%;
+  }
+  .headingtxtsty {
+    font-size: 45px;
+  }
+  .policeimgsty {
+    width: 100%;
+  }
+  .imgsty {
+    max-width: 280px;
+  }
+}
+
+/* 2. @media(max-width: 992px) */
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+  .headingtxtsty {
+    font-size: 40px;
+  }
+  .policeimgsty {
+    width: 100%;
+    height: auto;
+  }
+  .imgsty {
+    max-width: 260px;
+  }
+}
+
+/* 3. @media(max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .headingtxtsty {
+    font-size: 35px;
+  }
+  .policeimgsty {
+    width: 100%;
+    height: auto;
+  }
+  .imgsty {
+    max-width: 100%;
+  }
+  .nationnews {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .newstxtsty {
+    font-size: 18px;
+  }
+  .btntxtsty {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headingtxtsty {
+    font-size: 30px;
+    width: 90%;
+    line-height: 1.2;
+  }
+  .policeimgsty {
+    width: 98%;
+    height: auto;
+  }
+  .imgsty {
+    max-width: 100%;
+  }
+  .homecontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .nationnews {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .newstxtsty {
+    font-size: 20px;
+  }
+  .btntxtsty {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+/* 5. @media(max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .headingtxtsty {
+    font-size: 28px;
+  }
+  .policeimgsty {
+    width: 100%;
+    height: auto;
+  }
+  .imgsty {
+    max-width: 100%;
+  }
+  .nationnews {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .newstxtsty {
+    font-size: 18px;
+  }
+  .btntxtsty {
+    font-size: 18px;
+  }
+}
+
+/* 6. @media(min-width: 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    width: 920px;
+  }
+  .headingtxtsty {
+    font-size: 50px;
+  }
+  .policeimgsty {
+    width: 918px;
+  }
+  .imgsty {
+    max-width: 326px;
+  }
+}
+
+/* 7. @media(min-width: 992px) */
+@media (min-width: 992px) {
+  .container {
+    width: 920px;
+  }
+  .headingtxtsty {
+    font-size: 45px;
+  }
+  .policeimgsty {
+    width: 918px;
+  }
+  .imgsty {
+    max-width: 300px;
+  }
+}
+
+/* 8. @media(min-width: 768px) */
+@media (min-width: 768px) {
+  .container {
+    width: 85%;
+  }
+  .headingtxtsty {
+    font-size: 40px;
+  }
+  .policeimgsty {
+    width: 100%;
+  }
+  .imgsty {
+    max-width: 280px;
+  }
+}
+
+/* 9. @media(min-width: 576px) */
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .headingtxtsty {
+    font-size: 35px;
+    width: 90%;
+  }
+  .policeimgsty {
+    width: 100%;
+  }
+  .imgsty {
+    max-width: 260px;
+  }
+}
+
+/* 10. @media(min-width: 480px) */
+@media (min-width: 480px) {
+  .container {
+    width: 90%;
+  }
+  .headingtxtsty {
+    font-size: 30px;
+  }
+  .policeimgsty {
+    width: 100%;
+  }
+  .imgsty {
+    max-width: 240px;
+  }
+}

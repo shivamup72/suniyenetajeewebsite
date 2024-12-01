@@ -1,0 +1,184 @@
+.container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 40px;
+  width: 100%;
+  justify-content: space-between; /* Ensures space between the sections */
+}
+
+.imagecontainer {
+  width: 572px;
+  height: 369px;
+  position: relative;
+}
+.newsLink{
+  color: #fff;
+}
+.newsLink {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit the text color */
+}
+
+.newsItem {
+  transition: color 0.3s ease; /* Smooth transition for the color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.newsLink:hover .newtxtsty {
+  color: red; /* Change the text color to red on hover */
+}
+
+.newtxtsty {
+  transition: color 0.3s ease; /* Smooth text color transition */
+  color: black; /* Default text color */
+}
+
+.categorySection {
+  flex: 1;
+  padding-left: 10px;
+  overflow-y: auto;
+  max-height: 450px;
+  width: 100%;
+}
+.categorySection2 {
+  flex: 1;
+  padding-left: 10px;
+  overflow-y: auto;
+  max-height: 450px;
+  width: 100%;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 25px;
+  font-weight: 700;
+  color: black;
+}
+
+.newheadline {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  color: black;
+}
+
+.newtxtsty {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: black;
+}
+
+.newsImage {
+  width: 155px;
+  height: 87px;
+  object-fit: cover;
+}
+
+.newsItem {
+  display: flex;
+  flex-direction: row;
+  /* gap: 10px; */
+  width: 90%;
+}
+
+.imgsty {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.marketingimgsty {
+  height: 253px;
+  width: 297px;
+}
+
+.redOverlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 85px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.headtxtsty {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 3px;
+  }
+
+  .categorySection {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .imagecontainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .marketingimgsty {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 98%;
+    flex-direction: column;
+  }
+  .imgsty {
+    width: 98%;
+  }
+  .redOverlay {
+    width: 98%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .marketingimgsty {
+    width: 98%;
+    margin: 0 auto;
+    display: block;
+  }
+  .imagecontainer {
+    margin: 0 auto;
+    display: block;
+    width: 98%;
+    left: 2px;
+  }
+  .newheadline {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: black;
+  }
+  .categorySection {
+    flex: 1;
+    padding-left: 10px;
+    overflow-y: auto;
+    /* max-height: 450px; */
+    width: 98%;
+  }
+}

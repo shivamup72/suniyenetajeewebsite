@@ -3,8 +3,11 @@ import line from "../../../assest/Line.png";
 import anupma from "../../../assest/sportsfour.png";
 import cd from "../../../assest/sportsone.png";
 import gill from "../../../assest/sportstwo.png";
+import Frame from "../../../assest/Frame.png";
+
 import indvspak from "../../../assest/sportsthree.png";
 import styles from "./Sports.module.css";
+import { Link } from "react-router-dom";
 
 const newsItems = [
     {
@@ -61,26 +64,36 @@ function TrendingSportsNews() {
     return (
         <div>
             <div>
-                <img src={line} alt="News" className={styles.lineImage} />
+                <div style={{ position: "relative" }}>
+                    <img src={Frame} alt="frame" className={styles.framestyle} />
+                    <img src={line} alt="line" className={styles.lineImage} />
+                </div>
             </div>
             <div className={styles.newscontainer}>
                 {newsItems.map((item, index) => (
-                    <div className={styles.trendingnewimgsty} key={index}>
-                        <img
-                            src={item.imgSrc}
-                            className={styles.anumpaimgsty}
-                            alt="News Thumbnail"
-                        />
-                        <div className={styles.newconsty}>
-                            <div className={styles.soccercontainer}>
-                                <p className={styles.soccertxtsty}>{item?.soccer}</p>
+                    <Link
+                        to={`/sports/${item.id}`}
+                        state={{ item }}
+                        key={item.id}
+                        className={styles.newsLink}
+                    >
+                        <div className={styles.trendingnewimgsty} key={index}>
+                            <img
+                                src={item.imgSrc}
+                                className={styles.anumpaimgsty}
+                                alt="News Thumbnail"
+                            />
+                            <div className={styles.newconsty}>
+                                <div className={styles.soccercontainer}>
+                                    <p className={styles.soccertxtsty}>{item?.soccer}</p>
+                                </div>
+                                <p className={styles.timetxtsty}>{item?.time}</p>
+                                <p className={styles.newstxtsty}>
+                                    {item.text}
+                                </p>
                             </div>
-                            <p className={styles.timetxtsty}>{item?.time}</p>
-                            <p className={styles.newstxtsty}>
-                                {item.text}
-                            </p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

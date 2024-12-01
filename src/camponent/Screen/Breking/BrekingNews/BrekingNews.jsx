@@ -9,7 +9,9 @@ import breking from "../../../assest/brekingimg.png";
 import breking9 from "../../../assest/breking9.png";
 import seemorenews from "../../../assest/seemore.png";
 import arrowdwon from "../../../assest/arrowdwon.png";
+import Frame from '../../../assest/Frame.png'
 import styles from "./BrekingNews.module.css";
+import { Link } from "react-router-dom";
 
 const newsItems = [
     { imgSrc: anupma, text: "Lucknow News : शत्रु संपत्ति भवन में चल रहा होटल कबीला सील, कई और कब्जेदार भी रडार पर- 200 संपत्तियों का लिस्ट में नाम" },
@@ -38,28 +40,30 @@ function BrekingNews() {
     return (
         <div>
             <div>
-                <img src={line} alt="News" className={styles.lineImage} />
-            </div>
-            <div>
                 <h4>More News</h4>
             </div>
             <div className={styles.newscontainer}>
                 {(showAll ? newsItems : newsItems.slice(0, 7)).map((item, index) => (
-                    <div
-                        className={styles.trendingnewimgsty}
+                    <Link
+                        to={`/news/${index}`}
+                        state={{ item }}
                         key={index}
+                        className={styles.newsLink}
                     >
-                        <img
-                            src={item.imgSrc}
-                            className={styles.anumpaimgsty}
-                            alt="News Thumbnail"
-                        />
-                        <div className={styles.newconsty}>
-                            <p className={styles.newstxtsty}>
-                                {item.text}
-                            </p>
+                        <div className={styles.trendingnewimgsty} key={index}>
+                            <img
+                                src={item.imgSrc}
+                                className={styles.anumpaimgsty}
+                                alt="News Thumbnail"
+                            />
+                            <div className={styles.newconsty}>
+                                <p className={styles.newstxtsty}>
+                                    {item.text}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+
+                    </Link>
                 ))}
                 {!showAll && (
                     <div className={styles.seemoreContainer} onClick={handleSeeMoreClick}>

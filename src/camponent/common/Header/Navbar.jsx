@@ -3,6 +3,9 @@ import styles from "./Navbar.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import TopHeader from "../TopHeader/TopHeader";
+import Suniye from '../../assest/Suniye.png';
+import Neta from '../../assest/NetaJee.png';
+import logo from '../../assest/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +25,13 @@ const Navbar = () => {
     <div >
       <TopHeader />
       <nav className={styles.navbar}>
+        <div className={styles.netajiimgsty}>
+          <div className={styles.heddenimg}>
+            <img src={Suniye} alt="Suniye" className={styles.netajitxtsty} />
+            <img src={Neta} alt="Neta" className={styles.netasty} />
+          </div>
+        </div>
+
         <div className={styles.burgerIcon} onClick={handleBurgerClick}>
           {isOpen ? <FaTimes className={styles.icon} /> : <FaBars className={styles.icon} />}
         </div>
@@ -31,49 +41,46 @@ const Navbar = () => {
           <ul className={styles.navLinks}>
             <Link to="/" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
               <li>
-                <p style={{ color: location.pathname === "/" ? "#ffb804" : "#000", fontWeight: '600' }}>Home</p>
-              </li>
-            </Link>
-            <Link to="/politics" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
-              <li>
-                <p style={{ color: location.pathname === "/politics" ? "#ffb804" : "#000", fontWeight: '600' }}>Politics</p>
+                <p style={{ color: location.pathname === "/" ? "#ffb804" : "#000", fontWeight: '600' }}>HOME</p>
               </li>
             </Link>
             <Link to="/breking" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
               <li>
-                <p style={{ color: location.pathname === "/breking" ? "#ffb804" : "#000", fontWeight: '600' }}>Breking</p>
+                <p style={{ color: location.pathname === "/breking" ? "#ffb804" : "#000", fontWeight: '600' }}>BREKING</p>
+              </li>
+            </Link>
+            <Link to="/politicsNews" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
+              <li>
+                <p style={{ color: location.pathname === "/politicsNews" ? "#ffb804" : "#000", fontWeight: '600' }}>POLITICAL</p>
+              </li>
+            </Link>
+            <Link to="/education" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
+              <li>
+                <p style={{ color: location.pathname === "/education" ? "#ffb804" : "#000", fontWeight: '600' }}>EDUCATION</p>
+              </li>
+            </Link>
+            <Link to="/entertainment" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
+              <li>
+                <p style={{ color: location.pathname === "/entertainment" ? "#ffb804" : "#000", fontWeight: '600' }}>ENTERTAINMENT</p>
               </li>
             </Link>
             <Link to="/sports" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
               <li>
-                <p style={{ color: location.pathname === "/sports" ? "#ffb804" : "#000", fontWeight: '600' }}>Sports</p>
+                <p style={{ color: location.pathname === "/sports" ? "#ffb804" : "#000", fontWeight: '600' }}>SPORTS</p>
               </li>
             </Link>
-            <Link to="/contacts" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
+            <Link to="/nation" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
               <li>
-                <p style={{ color: location.pathname === "/contacts" ? "#ffb804" : "#000", fontWeight: '600' }}>Accident</p>
+                <p style={{ color: location.pathname === "/nation" ? "#ffb804" : "#000", fontWeight: '600' }}>NATION</p>
               </li>
             </Link>
-            <Link to="/privacy" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
+            <Link to="/world" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
               <li>
-                <p style={{ color: location.pathname === "/privacy" ? "#ffb804" : "#000", fontWeight: '600' }}>Social</p>
+                <p style={{ color: location.pathname === "/world" ? "#ffb804" : "#000", fontWeight: '600' }}>WORLD</p>
               </li>
             </Link>
-            <Link to="/national" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
-              <li>
-                <p style={{ color: location.pathname === "/national" ? "#ffb804" : "#000", fontWeight: '600' }}>Health</p>
-              </li>
-            </Link>
-            <Link to="/privacy" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
-              <li>
-                <p style={{ color: location.pathname === "/privacy" ? "#ffb804" : "#000", fontWeight: '600' }}>Religious</p>
-              </li>
-            </Link>
-            <Link to="/national" style={{ textDecoration: "none" }} onClick={handleLinkClick}>
-              <li>
-                <p style={{ color: location.pathname === "/national" ? "#ffb804" : "#000", fontWeight: '600' }}>Astrology</p>
-              </li>
-            </Link>
+
+
           </ul>
         </div>
       </nav>

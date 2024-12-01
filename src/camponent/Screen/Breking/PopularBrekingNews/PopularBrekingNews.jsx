@@ -8,6 +8,7 @@ import arvindkejariwal from '../../../assest/arvindkejariwal.png';
 import degree from '../../../assest/degree.png';
 import marketingone from '../../../assest/marketingone.png';
 import marketing from '../../../assest/marketing.png';
+import { Link } from 'react-router-dom';
 
 const newsItems = [
     { imgSrc: rahulpriyanka, text: "Bihar Politics: राजद की इन हरकतों से राहुल-प्रियंका नाराज? खरगे ने अकेले ही संभाला मोर्चा", date: 'Saturday | October 26, 2024', news: "40 संसदीय क्षेत्रों वाले बिहार में चुनावी प्रक्रिया सात चरणों में पूरी होनी है। चौथा चरण अपने समापन की ओर है। कांग्रेस प्रत्याशियों के पक्ष में प्रचार-प्रसार के लिए खरगे फिर भी समय निकाल ले रहे हैं लेकिन राहुल को दक्षिणी और प्रियंका को उत्तरी राज्यों से ही फुर्सत नहीं। जबकि बिहार की तुलना में कांग्रेस के लिए संभावना भी अपेक्षाकृत अधिक हैं।" },
@@ -28,24 +29,35 @@ function PopularBreakingNews() {
             <div>
                 <img src={line} alt="News" className={styles.lineImage} />
             </div>
-            <div style={{ display: 'flex' }}>
+            <div className={styles.contentcontainer}>
                 <div className={styles.newsGrid}>
                     {newsItems.map((item, index) => (
                         <div className={styles.trendingnewimgsty} key={index}>
-                            <img src={item.imgSrc} className={styles.imgsty} alt="News Thumbnail" />
-                            <div className={styles.newconsty}>
-                                <p className={styles.newstxtsty}>{item.text}</p>
-                                <p className={styles.datetxtsty}>{item.date}</p>
-                                <p className={styles.newslinetxtsty}>{item.news}</p>
-                            </div>
+
+                            <Link
+                                to={`/news/${index}`}
+                                state={{ item }}
+                                key={index}
+                                className={styles.newsLink}
+                            >
+                                <>
+                                    <img src={item.imgSrc} className={styles.imgsty} alt="News Thumbnail" />
+                                    <div className={styles.newconsty}>
+                                        <p className={styles.newstxtsty}>{item.text}</p>
+                                        <p className={styles.datetxtsty}>{item.date}</p>
+                                        <p className={styles.newslinetxtsty}>{item.news}</p>
+                                    </div>
+                                </>
+                            </Link>
                         </div>
+
                     ))}
                 </div>
-                {/* <div className={styles.addcontainersty}>
+                <div className={styles.addcontainersty}>
                     <img src={degree} className={styles.imgsty1} />
                     <img src={marketingone} className={styles.imgsty2} />
                     <img src={marketing} className={styles.imgsty3} />
-                </div> */}
+                </div>
             </div>
         </div>
     );

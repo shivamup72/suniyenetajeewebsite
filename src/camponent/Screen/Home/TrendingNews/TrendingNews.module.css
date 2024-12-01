@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px;
+  width: 332px;
+}
+
+.imgsty {
+  width: 332px;
+  height: 187px;
+}
+.newstxtsty {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  color: black;
+}
+.newsLink {
+  color: #fff;
+}
+.newsItem {
+  transition: color 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Indicate the item is interactive */
+}
+
+.newsLink:hover .newstxtsty {
+  color: red; /* Change the text color to red when hovered */
+}
+
+.newstxtsty {
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}

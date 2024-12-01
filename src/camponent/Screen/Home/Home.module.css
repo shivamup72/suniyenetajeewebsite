@@ -7,9 +7,19 @@
   margin-right: auto; /* Optional: Center horizontally if needed */
   width: 96%;
   background-color: #fff;
-  max-width: 1169px;
+  max-width: 1280px;
 }
-
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+  background-color: #fff;
+  max-width: 1280px;
+}
 
 .homecontainer {
   align-items: center;
@@ -88,19 +98,15 @@
   align-self: center;
 }
 
-
-
-
-
-
-
-
+.trendingpolicessty {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .highlight {
   color: #033d49; /* Choose your desired color */
 }
-
-
 
 @media (max-width: 768px) {
   .modijiimgsty,
@@ -120,5 +126,9 @@
     line-height: 28px;
     width: 90%;
     left: 10px;
+  }
+  .trendingpolicessty {
+    display: flex;
+    flex-direction: column;
   }
 }
